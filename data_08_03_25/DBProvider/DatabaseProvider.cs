@@ -12,6 +12,7 @@ namespace data_08_03_25.DBProvider
     public class DatabaseProvider (string connectionString)
     {
         [Obsolete ("Obsolete")]
+
         public async Task InitializeDatabaseAsync()
         {
             await using var connection = new SqlConnection(connectionString);
