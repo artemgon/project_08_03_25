@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="desktop_08_03_25.Pages.LoginPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:desktop_08_03_25.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" >
+    <UserControl.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#606c88" Offset="0.05"/>
+            <GradientStop Color="#3f4c6b" Offset="0.30"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <materialDesign:Card Grid.Column="1"
+                             Margin="0 60 0 60"
+                             materialDesign:UniformCornerRadius="0"
+                             materialDesign:ElevationAssist.Elevation="Dp5">
+            <StackPanel Orientation="Vertical"
+                        Margin="0 35 0 0">
+                <TextBlock Text="Welcome to Game Store!"
+                           FontSize="19.5"
+                           FontFamily="Times New Roman"
+                           FontWeight="Thin"
+                           Foreground="#1c324a"
+                           TextAlignment="Center"
+                           Margin="0 0 0 10"/>
+
+                <TextBlock Text="Please, login to continue."
+                           FontSize="14"
+                           FontFamily="Times New Roman"
+                           FontWeight="Thin"
+                           Foreground="#1c324a"
+                           TextAlignment="Center"
+                           Margin="0 0 0 10"/>
+
+                <Grid Margin="0 0 20 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <materialDesign:PackIcon Kind="Email"
+                                             VerticalAlignment="Center"
+                                             Margin="20 0 10 0"
+                                             Grid.Column="0"/>
+
+                    <TextBox Style="{StaticResource MaterialDesignFilledTextBox}"
+                             materialDesign:TextFieldAssist.TextFieldCornerRadius="0"
+                             materialDesign:HintAssist.Hint="Enter Your email"
+                             materialDesign:HintAssist.Foreground="#1c324a"
+                             FontSize="12"
+                             Foreground="#1c324a"
+                             Grid.Column="1"/>
+                </Grid>
+
+                <Grid Margin="0 0 20 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <materialDesign:PackIcon Kind="Lock"
+                                             VerticalAlignment="Center"
+                                             Margin="20 0 10 0"
+                                             Grid.Column="0"/>
+
+                    <PasswordBox Style="{StaticResource MaterialDesignFilledPasswordBox}"
+                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="0"
+                                 materialDesign:HintAssist.Hint="Password"
+                                 FontSize="12"
+                                 materialDesign:HintAssist.Foreground="#1c324a"
+                                 Foreground="#1c324a"
+                                 Grid.Column="1"/>
+                </Grid>
+                
+                <WrapPanel Margin="20 0 20 10" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                            Content="Sign up"
+                            Foreground="White"
+                            Background="#1c324a"
+                            Margin="0 0 35 0"/>
+
+                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                            Content="Sign in"
+                            Foreground="White"
+                            Background="#1c324a"
+                            Margin="35 0 0 0"/>
+                </WrapPanel>
+                 
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

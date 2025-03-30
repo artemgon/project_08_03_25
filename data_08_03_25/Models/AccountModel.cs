@@ -20,6 +20,12 @@ namespace data_08_03_25.Models
             Settings = [];
         }
 
+        public AccountModel(string? email, string? password)
+        {
+            Email = email;
+            Password = password;
+        }
+
         public AccountModel(int iD, string? username, string? password, string? email)
         {
             ID = iD;
@@ -36,6 +42,11 @@ namespace data_08_03_25.Models
             Password = password;
             Email = email;
             Settings = settings;
+        }
+    
+        public override string ToString()
+        {
+            return $"ID: {ID}, Username: {Username}, Password: {Password}, Email: {Email}, Settings: {Settings}";
         }
     }
 }
