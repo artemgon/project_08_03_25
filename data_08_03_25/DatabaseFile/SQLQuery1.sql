@@ -1,21 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿use Games_Store_and_Launcher;
 
-namespace data_08_03_25.DBCommands
-{
-    public class DbCommands
-    {
-        public static string CreateDbCommandWithNotExists(string dbName)
-            => $"IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = '{dbName}') CREATE DATABASE {dbName};";
-
-        public static string UseDbCommand(string dbName)
-            => $"USE {dbName};";
-
-        public static string CreateTablesCommandIfNotExist() => @"
-        IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Accounts]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Accounts]') AND type in (N'U'))
         BEGIN
             CREATE TABLE Accounts (
                 ID INT PRIMARY KEY IDENTITY(1,1),
@@ -64,22 +49,6 @@ namespace data_08_03_25.DBCommands
                     SettingID INT FOREIGN KEY REFERENCES Settings(ID) ,
                     PRIMARY KEY(AccountID, SettingID)
                 );
-        END";
+        END
 
-        public static string DropTablesCommand()
-            => @" DROP TABLE IF EXISTS AccountsSettings;
-                  DROP TABLE IF EXISTS Settings; 
-                  DROP TABLE IF EXISTS GamesDetail;
-                  DROP TABLE IF EXISTS Games;
-                  DROP TABLE IF EXISTS Accounts;";
-
-        public static string InsertAccountCommand =>
-            "INSERT INTO Accounts (Username, Password, Email) VALUES (@Username, @Password, @Email);";
-
-        public static string GetAccountByEmailAndPasswordCommand =>
-            "SELECT ID, Username, Password, Email FROM Accounts WHERE Email = @Email AND Password = @Password;";
-    
-        public static string GetAccountCommand =>
-            "SELECT ID, Username, Password, Email FROM Accounts WHERE Email = @Email;";
-    }
-}
+        insert into Accounts (Username, Password, Email) values ('username', 'password', 'email@mail.com');

@@ -53,7 +53,8 @@
                                              Margin="20 0 10 0"
                                              Grid.Column="0"/>
 
-                    <TextBox Style="{StaticResource MaterialDesignFilledTextBox}"
+                    <TextBox x:Name="SignInTextBox"
+                             Style="{StaticResource MaterialDesignFilledTextBox}"
                              materialDesign:TextFieldAssist.TextFieldCornerRadius="0"
                              materialDesign:HintAssist.Hint="Enter Your email"
                              materialDesign:HintAssist.Foreground="#1c324a"
@@ -73,7 +74,8 @@
                                              Margin="20 0 10 0"
                                              Grid.Column="0"/>
 
-                    <PasswordBox Style="{StaticResource MaterialDesignFilledPasswordBox}"
+                    <PasswordBox x:Name="PasswordBox"
+                                 Style="{StaticResource MaterialDesignFilledPasswordBox}"
                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="0"
                                  materialDesign:HintAssist.Hint="Password"
                                  FontSize="12"
@@ -83,16 +85,16 @@
                 </Grid>
                 
                 <WrapPanel Margin="20 0 20 10" HorizontalAlignment="Center">
-                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
-                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    <Button x:Name="SignUpButton"
                             Content="Sign up"
+                            Click="SignUpButtonClick"
                             Foreground="White"
                             Background="#1c324a"
                             Margin="0 0 35 0"/>
 
-                    <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
-                            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    <Button  x:Name="SignInButton"
                             Content="Sign in"
+                            Click="SignInButtonClick"
                             Foreground="White"
                             Background="#1c324a"
                             Margin="35 0 0 0"/>

@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <SupportedOSPlatformVersion>10.0.22621.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>10.0.26100.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\core_08_03_25\core_08_03_25.csproj" />
+    <ProjectReference Include="..\data_08_03_25\data_08_03_25.csproj" />
   </ItemGroup>
 
   <ItemGroup>
