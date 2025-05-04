@@ -11,6 +11,14 @@
 
   <ItemGroup>
     <None Remove="Assets\Icons\LoginWindowIcon.ico" />
+    <None Remove="Assets\Images\1-st card%28gta 5%29.jpg" />
+    <None Remove="Assets\Images\2-nd card%28crysis 2%29.png" />
+    <None Remove="Assets\Images\3-rd card %28RE7%29.png" />
+    <None Remove="Assets\Images\4-rd %28Quake 4%29.jpg" />
+    <None Remove="Assets\Images\5-th card %28DBD%29.jpg" />
+    <None Remove="Assets\Images\6-th %28Red Alert 3%29.jpg" />
+    <None Remove="Assets\Images\7-th card %28Alien Shooter%29.jpg" />
+    <None Remove="Assets\Images\8-th card %28HL2%29.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +32,14 @@
 
   <ItemGroup>
     <Resource Include="Assets\Icons\LoginWindowIcon.ico" />
+    <Resource Include="Assets\Images\1-st card(gta 5).jpg" />
+    <Resource Include="Assets\Images\2-nd card(crysis 2).png" />
+    <Resource Include="Assets\Images\3-rd card (RE7).png" />
+    <Resource Include="Assets\Images\4-rd (Quake 4).jpg" />
+    <Resource Include="Assets\Images\5-th card (DBD).jpg" />
+    <Resource Include="Assets\Images\6-th (Red Alert 3).jpg" />
+    <Resource Include="Assets\Images\7-th card (Alien Shooter).jpg" />
+    <Resource Include="Assets\Images\8-th card (HL2).jpg" />
   </ItemGroup>
 
 </Project>

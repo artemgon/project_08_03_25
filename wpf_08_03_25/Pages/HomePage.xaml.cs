@@ -26,7 +26,7 @@ namespace desktop_08_03_25.Pages
         {
             _account = account;
             InitializeComponent();
-            HomeText.Text = $"Welcome, {_account.Email}";
+            AccountName.Text = $"{_account.Email}";
         }
     }
 }
